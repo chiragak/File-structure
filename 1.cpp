@@ -8,6 +8,7 @@ int main()
 {
     int choice,n;
     string rv,name,s;
+    fstream f1,f2;
     cout<<"1.From standard input\n2.From file\n3.Exit\n";
     cin>>choice;
     switch(choice)
@@ -20,14 +21,15 @@ int main()
             cout<<"Enter the string:";
             cin>>name;
             rv=rev(name);
+            cout<<rv<<"\n";
         }
         break;
 
         case 2:cout<<"From standard I/O \n";
-        fstream f1,f2,file;
+        
         f1.open("str.txt",ios::in);
         f2.open("rev.txt",ios::out);
-        while(!file.eof())
+        while(!f1.eof())
         {
             s.erase();
             f1>>s;
@@ -40,7 +42,7 @@ int main()
         cout<<"\n reverse contents copied";
         break;
         
-        case 3:return (0);
+        case 3:return(0);
 
     }
 }
