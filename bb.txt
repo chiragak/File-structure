@@ -1,0 +1,4 @@
+Enter the oprtion
+ 1.From standara I/O
+2.From File
+3.exit
